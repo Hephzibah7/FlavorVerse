@@ -24,7 +24,7 @@ const Login=({setLoginUser})=>{
         .then(res=>{
             alert(res.data.message)
             setLoginUser(res.data.user)
-            navigate("/Main")
+            navigate(user.email && user.password ? "/Main": alert("Fill in the credentials to log in"))
         })
     }
 
