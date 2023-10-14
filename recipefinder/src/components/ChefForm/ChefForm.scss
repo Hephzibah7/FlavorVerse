@@ -1,0 +1,230 @@
+$color_1: rgb(191, 191, 191);
+$color_2: rgb(255, 229, 195);
+$color_3: #f0860c;
+$color_4: white;
+$background-color_1: rgb(12, 12, 12);
+
+/* html {
+    background: rgb(12,12,12);
+    font-family: sans-serif;
+  } */
+@keyframes slide-up2 {
+	0% {
+		transform: translateY(.5em);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes glow-load {
+	0% {
+		box-shadow: none;
+	}
+	100% {
+		box-shadow: 0px 0px 50px #f0860c;
+	}
+}
+@keyframes continuous-glow {
+	0% {
+		box-shadow: 0 0 5px rgba(255, 157, 9, 0.39), inset 0 0 5px rgba(255, 153, 0, 0.356), 0 2px 0 #000;
+	}
+	100% {
+		box-shadow: 0 0 20px rgba(255, 153, 0, 0.6), inset 0 0 10px rgba(255, 145, 0, 0.4), 0 2px 0 #000;
+	}
+}
+@keyframes blur-load {
+	0% {
+		opacity: 0;
+		filter: blur(0.2em);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0);
+	}
+}
+* {
+	box-sizing: border-box;
+}
+::after {
+	box-sizing: border-box;
+}
+::before {
+	box-sizing: border-box;
+}
+.form-container {
+	margin: auto;
+	width: 90%;
+    font-family: 'Playfair Display', serif;
+    .form{
+        font-weight: bold;
+        .chef-category{
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            text-transform: uppercase;
+            font-family: 'Roboto Slab', serif;
+            justify-content: space-between;
+        }
+    }
+    .header{
+        color: white;
+        font-family: 'Roboto Slab', serif;
+    }
+	input {
+		&:focus {
+			animation: continuous-glow 800ms ease-out infinite alternate;
+			box-shadow: 0 0 5px #f0860c, inset 0 0 5px #f0860c, 0 2px 0 #000;
+			color: $color_2;
+		}
+	}
+	select {
+		&:focus {
+			animation: continuous-glow 800ms ease-out infinite alternate;
+			box-shadow: 0 0 5px #f0860c, inset 0 0 5px #f0860c, 0 2px 0 #000;
+			color: $color_2;
+		}
+	}
+	textarea {
+		&:focus {
+			animation: continuous-glow 800ms ease-out infinite alternate;
+			box-shadow: 0 0 5px #f0860c, inset 0 0 5px #f0860c, 0 2px 0 #000;
+			color: $color_2;
+		}
+	}
+}
+.form-item {
+	opacity: 0;
+    // font-weight: bold;
+}
+.textarea-div {
+	opacity: 0;
+	width: 100%;
+	textarea {
+		background: #1b1a1a;
+		color: $color_2;
+	}
+}
+.form-item1 {
+	animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .3s 1 slide-up2;
+	animation-fill-mode: forwards;
+}
+.form-item2 {
+	animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .4s 1 slide-up2;
+	animation-fill-mode: forwards;
+}
+.form-item3 {
+	animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .5s 1 slide-up2;
+	animation-fill-mode: forwards;
+}
+.form-item4 {
+	animation: .2s cubic-bezier(0.47, 0, 0.745, 0.715) .6s 1 slide-up2;
+	animation-fill-mode: forwards;
+}
+form {
+	background-color: $background-color_1;
+	border-radius: 1.25em;
+	padding: 1.5em;
+	animation: 1s cubic-bezier(0.47, 0, 0.745, 0.715) .7s 1 glow-load;
+	animation-fill-mode: forwards;
+	label {
+		color: $color_1;
+	}
+}
+option {
+	background: #1b1a1a;
+	color: $color_2;
+}
+select {
+	background: #1b1a1a;
+	color: $color_2;
+	padding: 0.625em 1em;
+	width: 100%;
+	outline: 0;
+	margin-bottom: 1.25em;
+	border-radius: 1.25em;
+	border: 0;
+}
+input {
+	background: #1b1a1a;
+	color: $color_2;
+	&:not(.btn) {
+		padding: 0.625em 1em;
+		width: 100%;
+		outline: 0;
+		margin-bottom: 1.25em;
+		border-radius: 1.25em;
+		border: 0;
+	}
+}
+.form-header {
+	text-align: center;
+	font-size: 28px;
+	padding: 0;
+	margin-bottom: 1.25em;
+	color: $color_3;
+}
+label {
+	display: block;
+	margin-bottom: 0.35em;
+	margin-top: 0.35em;
+}
+textarea {
+	padding: 10px;
+	width: 100%;
+	outline: 0;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 0;
+	font-size: 14px;
+	height: 100px;
+}
+.btn-container {
+	margin: auto;
+	padding-bottom: 1em;
+    text-align: center;
+    // background-color: white;
+}
+.form-btn {
+	background: rgb(12, 12, 12);
+	border: none;
+	margin-top: 1em;
+	font-size: 20px;
+	padding: .5em;
+    
+	&:hover {
+		background: #f0860c;
+        // color: black;
+	}
+}
+.btn-glow {
+	animation: .5s ease-out 0s 1 blur-load;
+	border-radius: 2em;
+	color: $color_4;
+	transition: .4s;
+	&:hover {
+		box-shadow: 0px 0px 10px #f0860c;
+	}
+}
+@media only screen and (min-width: 35.8em) {
+	.form {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.form-item {
+		width: 45%;
+	}
+	.form-container {
+		padding: 5em 0;
+		width: 80%;
+	}
+}
+@media only screen and (min-width: 60.625em) {
+	.form-container {
+		padding: 8em 0;
+		width: 70%;
+	}
+}

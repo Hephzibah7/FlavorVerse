@@ -1,0 +1,21 @@
+.section.quote{
+    display: block;
+    .quote-text{
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: var(--text-color);
+
+    }
+    .quote-author{
+        font-size: 1rem;
+        color: var(--text-light);
+        text-align: right;
+    }
+}
+
+.main{
+    padding-block: 3vw;
+}
+.container{
+    padding-inline: 12vw;
+}

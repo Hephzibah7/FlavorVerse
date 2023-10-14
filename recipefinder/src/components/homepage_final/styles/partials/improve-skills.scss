@@ -1,0 +1,34 @@
+.section.improve-skills{
+    margin-top: 5rem;
+    .col.img{
+        position: relative;
+        // border-radius: 7px;
+        .img{
+            position: absolute;
+            height: 50%;
+            width: 100%;
+            // border-radius: 17px;
+        }
+    }
+    .col.typography{
+        padding-left: 4rem;
+        .skill-item{
+            border-left: 0.4rem solid var(--primary-color);
+            margin-bottom: 0.7rem;
+            padding: 0.2rem 0 0.1rem 1rem;
+            color: var(--text-light);
+            font-weight: bold;
+            transform: translateX(100%);
+            opacity: 0;
+            animation: getAnimationDuration(0.5s) slideInRight forwards;
+            @for $i from 1 through 7{
+                &:nth-child(#{$i}){
+                    animation-delay: #{$i * 0.1}s;
+                }
+            }
+        }
+        .btn{
+            margin-top: 1rem;
+        }
+    }
+}
