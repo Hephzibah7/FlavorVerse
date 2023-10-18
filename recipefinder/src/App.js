@@ -27,7 +27,6 @@ function App() {
         {/* Defining the paths of various files */}
           <Route exact path="/" element={<Homepage />}  />
           <Route path="/login" element={user && user._id ? <Main/>:<Login setLoginUser={setLoginUser}/>}  />
-          <Route exact path="/login" element={<Login setLoginUser={setLoginUser} />} />
           <Route exact path="/register" element={<Register/>} />
           <Route exact path="/Main" element={<Main/>} />
           <Route exact path="/ChefForm" element={<ChefForm/>} />
