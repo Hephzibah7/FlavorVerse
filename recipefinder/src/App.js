@@ -26,12 +26,7 @@ function App() {
 
         {/* Defining the paths of various files */}
           <Route exact path="/" element={<Homepage />}  />
-<<<<<<< Updated upstream
           <Route path="/login" element={user && user._id ? <Main/>:<Login setLoginUser={setLoginUser}/>}  />
-=======
-          {/* <Route path="/default" element={user && user._id ? <Main/>:<Login setLoginUser={setLoginUser}/>}  /> */}
-          <Route exact path="/login" element={<Login setLoginUser={setLoginUser} />} />
->>>>>>> Stashed changes
           <Route exact path="/register" element={<Register/>} />
           <Route exact path="/Main" element={<Main/>} />
           <Route exact path="/ChefForm" element={<ChefForm/>} />
